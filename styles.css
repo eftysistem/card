@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f0f0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: white;
+    width: 100%;
+    max-width: 600px;
+    min-height: 796px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    color: white;
+    position: relative;
+}
+
+/* Cintillo superior modificado para ser más ancho */
+.top-banner {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    height: 180px; /* Aumenté la altura */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Imagen del logo más grande para el cintillo ampliado */
+.profile-image {
+    width: 160px; /* Aumenté el tamaño */
+    height: 160px; /* Aumenté el tamaño */
+    border-radius: 12px;
+    border: 4px solid #fff;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.header {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    padding: 30px 25px 25px;
+    text-align: center;
+    position: relative;
+}
+
+.name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.title {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 25px;
+    text-align: justify;
+    padding: 0 15px;
+}
+
+.contact-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 25px 30px 30px;
+}
+
+.contact-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contact-btn {
+    background: white;
+    color: #333;
+    padding: 14px 10px;
+    border: none;
+    border-radius: 22px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.3);
+}
+
+.social-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-btn {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 18px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.social-btn:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-1px);
+}
+
+.contact-info {
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    padding: 14px 15px;
+    margin-bottom: 10px;
+    border-radius: 18px;
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.products-section {
+    background: white;
+    color: #333;
+    padding: 30px;
+    border-radius: 0;
+    min-height: 320px;
+}
+
+.products-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.gallery-item {
+    background: #f8f8f8;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.gallery-description {
+    padding: 14px;
+    font-size: 13px;
+    text-align: center;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Footer */
+.footer {
+    background: #1a1a1a;
+    color: #ccc;
+    text-align: center;
+    padding: 18px;
+    font-size: 13px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 700px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 70vh;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.modal-description {
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.close:hover {
+    opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+    .card {
+        width: 95%;
+        min-height: auto;
+    }
+    
+    .top-banner {
+        height: 150px; /* Ajusté para móvil */
+        padding: 15px;
+    }
+    
+    .profile-image {
+        width: 120px; /* Ajusté para móvil */
+        height: 120px; /* Ajusté para móvil */
+    }
+    
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-image {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .name {
+        font-size: 24px;
+    }
+    
+    .title {
+        font-size: 16px;
+    }
+    
+    .description {
+        font-size: 14px;
+    }
+}
