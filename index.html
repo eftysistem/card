@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EFTYSISTEM_Ing_Telecomunicaciones/electronica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card">
+        <!-- Cintillo superior con foto cuadrada -->
+        <div class="top-banner">
+           <img src="image/image.jpg" alt="logo" class="profile-image">
+        </div>
+
+        <!-- Header Section -->
+        <div class="header">
+            <h1 class="name">EFTYSISTEM</h1>
+             <h1 class="title">Ingenieria en Telecomunicaciones e Informatica</h1>
+            <p class="description">
+               Profesionales senior con más de 25 años de experiencia liderando proyectos complejos en los sectores de Telecomunicaciones y Tecnología de la Información. Nuestra trayectoria se distingue por un profundo conocimiento técnico en infraestructura de redes, incluyendo el diseño y configuración de enlaces microondas, radiofrecuencia (RF) y equipos de acceso como RRU y BBU de Nokia.
+
+De forma paralela, hemos desarrollado una sólida competencia como desarrollador Full-Stack (Frontend y Backend), con dominio de tecnologías como HTML, PHP, Java y MySQL Server. Esta doble especialización nos permite crear soluciones integrales que abarcan desde el hardware de red hasta la aplicación final.
+
+Nuestro liderazgo se enfoca en la gestión de personal orientada al éxito, creando equipos de alto rendimiento capaces de superar los objetivos más exigentes.
+            </p>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <div class="contact-buttons" style="display: flex; justify-content: center;">
+                <a href="https://wa.me/584141205716" target="_blank" class="contact-btn">📱 WhatsApp</a>
+                <button class="contact-btn">👤 Facebook</button>
+            </div>
+
+            <div class="social-buttons">
+                <button class="social-btn">📷 Instagram</button>
+                <button class="social-btn">💼 LinkedIn</button>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-item">✉️ eftysistem@gmail.com</div>
+                <div class="contact-item">📞 +58412-962.00.03. / 0414-339.91.12.</div>
+                <div class="contact-item">📍CARACAS/DTTO-CAPITAL-VENEZUELA</div>
+            </div>
+        </div>
+
+        <!-- Products Section -->
+        <div class="products-section">
+            <h2 class="products-title">Nuestro trabajos</h2>
+            <div class="gallery">
+                <!-- Proyecto de Ciberseguridad -->
+                <div class="gallery-item" onclick="openModal('gallery/ciberseguridad.jpg', 'Proyecto de Ciberseguridad y defensa para tu organización')">
+                    <img src="gallery/ciberseguridad.jpg" alt="Proyecto de Ciberseguridad" class="gallery-image">
+                    <div class="gallery-description">CIBERSEGURIDAD</div>
+                </div>
+                
+                <!-- Mantén tus otros proyectos -->
+                <div class="gallery-item" onclick="openModal('gallery/logo.jpg', 'LOGO')">
+                    <img src="gallery/logo.jpg" alt="logo" class="gallery-image">
+                    <div class="gallery-description">NOSOTROS</div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('gallery/cctv.jpg', 'instalación_cctv_profesionalismo_ip_')">
+                    <img src="gallery/cctv.jpg" alt="cctv" class="gallery-image">
+                    <div class="gallery-description">CCTV</div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('gallery/DATA_CENTER.jpg', 'Instalación de DATA CENTER')">
+                    <img src="gallery/DATA_CENTER.jpg" alt="logo" class="gallery-image">
+                    <div class="gallery-description">DATA_CENTER</div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('gallery/monitoreo.jpg', 'SALAS SITUACIONALES DE MONITOREO (CONTROL MASTER)')">
+                    <img src="gallery/monitoreo.jpg" alt="logo" class="gallery-image">
+                    <div class="gallery-description">MONITOREO</div>
+                </div>
+                
+                <div class="gallery-item" onclick="openModal('gallery/seguridad_industrial.jpg', 'Para EFTYSISTEM La Seguridad Industrial es prioridad. ')">
+                    <img src="gallery/seguridad_industrial.jpg" alt="logo" class="gallery-image">
+                    <div class="gallery-description">SEGURIDAD_INDUSTRIAL</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            Derechos reservados &copy; 2025 EFTYSISTEM/CARACAS/VENEZUELA.
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" class="modal-image" src="/placeholder.svg" alt="">
+            <div id="modalDescription" class="modal-description"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
